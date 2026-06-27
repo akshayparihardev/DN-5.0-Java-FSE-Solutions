@@ -1,0 +1,5 @@
+package WEEK_1.Design_Pattern.Exercise_2_Implementing_the_Factory_Pattern;
+
+interface Document{
+    void open();
+}
