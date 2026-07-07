@@ -1,24 +1,20 @@
 package com.library.aspect;
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.After;
 
 @Aspect
 public class LoggingAspect {
 
-    @Around("execution(* com.library.service.*.*(..))")
-    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+    @Before("execution(* com.library.service.*.*(..))")
+    public void beforeMethod(JoinPoint joinPoint) {
+        System.out.println("Before executing : " + joinPoint.getSignature().getName());
+    }
 
-        long start = System.currentTimeMillis();
-
-        Object result = joinPoint.proceed();
-
-        long end = System.currentTimeMillis();
-
-        System.out.println(joinPoint.getSignature().getName()
-                + " executed in " + (end - start) + " ms");
-
-        return result;
+    @After("execution(* com.library.service.*.*(..))")
+    public void afterMethod(JoinPoint joinPoint) {
+        System.out.println("After executing : " + joinPoint.getSignature().getName());
     }
 }
