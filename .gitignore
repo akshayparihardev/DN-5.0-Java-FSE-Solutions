@@ -1,0 +1,49 @@
+# ==========================
+# Java Compiled Files
+# ==========================
+*.class
+
+# ==========================
+# Logs
+# ==========================
+*.log
+
+# ==========================
+# Package Files
+# ==========================
+*.jar
+*.war
+*.ear
+
+# ==========================
+# IDE Files
+# ==========================
+
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.settings/
+.project
+.classpath
+bin/
+
+# NetBeans
+nbproject/
+build/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Temporary Files
+# ==========================
+*.tmp
+*.temp
