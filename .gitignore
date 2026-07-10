@@ -5,8 +5,12 @@
 
 # ==========================
 # Logs
-# ==========================
+
+# Ignore all log files
 *.log
+
+# Except the exercise log file
+!WEEK_1/Git/HOL_2/app.log
 
 # ==========================
 # Package Files
